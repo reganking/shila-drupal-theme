@@ -8,11 +8,11 @@ var config = {};
 config.browserSync = {
   proxyTarget: 'localhost:8080',
   proxyReqHeaders: {
-    host: 'www.shila.dev'
+    host: 'www.aleksip.dev'
   }
 };
 config.drush = {
-  alias: '@local.d8.shila'
+  alias: '@local.d8.ap'
 };
 config.sass = {
   srcFiles: [

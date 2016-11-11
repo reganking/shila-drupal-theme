@@ -1,0 +1,13 @@
+/**
+ * @file
+ * dist/_patterns/01-molecules/components/next-previous/_next-previous.scss
+ */
+
+.next-previous {
+  margin-top: 1.5rem;
+  border-top: 1px solid $light-gray;
+  padding: 1rem 0 0 0;
+  font-family: $font-stack-helvetica;
+  font-size: smaller;
+  list-style-type: none;
+}
