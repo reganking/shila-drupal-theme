@@ -14,75 +14,73 @@
  */
 /**
  * @file
- * sass/partials/_functions.scss
- *
- * Importing this file must not generate any CSS.
- *
- * Functions must not use global variables.
+ * dist/sass/partials/settings/_settings.colors.scss
  */
 /**
  * @file
- * dist/sass/partials/_variables.scss
- *
- * Originally based on http://bitters.bourbon.io/
- *
- * Importing this file must not generate any CSS.
+ * dist/sass/partials/settings/_settings.forms.scss
  */
 /**
  * @file
- * sass/partials/_placeholders.scss
+ * dist/sass/partials/settings/_settings.typography.scss
  */
-@media (max-width: 524px) {
-  button, input[type='button'], input[type='reset'], input[type='submit'], input,
-  label,
-  select, input[type='color'], input[type='date'], input[type='datetime'], input[type='datetime-local'], input[type='email'], input[type='month'], input[type='number'], input[type='password'], input[type='search'], input[type='tel'], input[type='text'], input[type='time'], input[type='url'], input[type='week'], input:not([type]), textarea,
-  select[multiple=multiple], html,
-  body {
-    font-size: 18px;
-  }
+/**
+ * @file
+ * dist/sass/partials/settings/_settings.layout.scss
+ */
+/**
+ * @file
+ * sass/partials/tools/_tools.clearfix.scss
+ */
+/**
+ * @file
+ * sass/partials/tools/_tools.colors.scss
+ */
+/**
+ * @file
+ * sass/partials/tools/_tools.constants.scss
+ */
+/**
+ * @file
+ * sass/partials/tools/_tools.font-size.scss
+ */
+/**
+ * @file
+ * sass/partials/tools/_tools.hidden.scss
+ */
+/**
+ * @file
+ * sass/partials/tools/_tools.layout.scss
+ */
+/**
+ * @file
+ * sass/partials/tools/_tools.lists.scss
+ */
+/**
+ * @file
+ * sass/partials/tools/_tools.multicol-layout.scss
+ */
+/**
+ * @file
+ * sass/partials/tools/_tools.sass-lists.scss
+ */
+/**
+ * @file
+ * dist/sass/partials/generic/_generic.box-sizing.scss
+ *
+ * https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+html {
+  box-sizing: border-box;
 }
 
-@media (min-width: 525px) {
-  button, input[type='button'], input[type='reset'], input[type='submit'], input,
-  label,
-  select, input[type='color'], input[type='date'], input[type='datetime'], input[type='datetime-local'], input[type='email'], input[type='month'], input[type='number'], input[type='password'], input[type='search'], input[type='tel'], input[type='text'], input[type='time'], input[type='url'], input[type='week'], input:not([type]), textarea,
-  select[multiple=multiple], html,
-  body {
-    font-size: 20px;
-  }
-}
-
-@media (min-width: 801px) {
-  button, input[type='button'], input[type='reset'], input[type='submit'], input,
-  label,
-  select, input[type='color'], input[type='date'], input[type='datetime'], input[type='datetime-local'], input[type='email'], input[type='month'], input[type='number'], input[type='password'], input[type='search'], input[type='tel'], input[type='text'], input[type='time'], input[type='url'], input[type='week'], input:not([type]), textarea,
-  select[multiple=multiple], html,
-  body {
-    font-size: 20px;
-  }
-}
-
-@media (min-width: 1025px) {
-  button, input[type='button'], input[type='reset'], input[type='submit'], input,
-  label,
-  select, input[type='color'], input[type='date'], input[type='datetime'], input[type='datetime-local'], input[type='email'], input[type='month'], input[type='number'], input[type='password'], input[type='search'], input[type='tel'], input[type='text'], input[type='time'], input[type='url'], input[type='week'], input:not([type]), textarea,
-  select[multiple=multiple], html,
-  body {
-    font-size: 20px;
-  }
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 /**
  * @file
- * sass/partials/_mixins.scss
- *
- * Importing this file must not generate any CSS.
- */
-/**
- * @file
- * atoms/_buttons.scss
- *
- * Originally based on http://bitters.bourbon.io/
+ * atoms/_elements.buttons.scss
  */
 button, input[type='button'], input[type='reset'], input[type='submit'] {
   appearance: none;
@@ -104,6 +102,30 @@ button, input[type='button'], input[type='reset'], input[type='submit'] {
   white-space: nowrap;
 }
 
+@media (max-width: 524px) {
+  button, input[type='button'], input[type='reset'], input[type='submit'] {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 525px) {
+  button, input[type='button'], input[type='reset'], input[type='submit'] {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 801px) {
+  button, input[type='button'], input[type='reset'], input[type='submit'] {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1025px) {
+  button, input[type='button'], input[type='reset'], input[type='submit'] {
+    font-size: 20px;
+  }
+}
+
 button:hover, button:focus, input[type='button']:hover, input[type='button']:focus, input[type='reset']:hover, input[type='reset']:focus, input[type='submit']:hover, input[type='submit']:focus {
   background-color: #11519a;
   color: #fff;
@@ -120,36 +142,7 @@ button:disabled:hover, input[type='button']:disabled:hover, input[type='reset']:
 
 /**
  * @file
- * atoms/_elements.scss
- */
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
-
-html {
-  background-color: #fefefe;
-}
-
-img,
-picture {
-  margin: 0;
-  max-width: 100%;
-  height: auto;
-}
-
-picture source,
-picture img {
-  width: 100%;
-  height: auto;
-}
-
-/**
- * @file
- * atoms/_forms.scss
- *
- * Originally based on http://bitters.bourbon.io/
+ * atoms/_elements.forms.scss
  */
 fieldset {
   background-color: transparent;
@@ -169,6 +162,38 @@ label,
 select {
   display: block;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+@media (max-width: 524px) {
+  input,
+  label,
+  select {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 525px) {
+  input,
+  label,
+  select {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 801px) {
+  input,
+  label,
+  select {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1025px) {
+  input,
+  label,
+  select {
+    font-size: 20px;
+  }
 }
 
 label {
@@ -196,6 +221,34 @@ select[multiple=multiple] {
   padding: 0.53333em;
   transition: border-color 150ms ease;
   width: 100%;
+}
+
+@media (max-width: 524px) {
+  input[type='color'], input[type='date'], input[type='datetime'], input[type='datetime-local'], input[type='email'], input[type='month'], input[type='number'], input[type='password'], input[type='search'], input[type='tel'], input[type='text'], input[type='time'], input[type='url'], input[type='week'], input:not([type]), textarea,
+  select[multiple=multiple] {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 525px) {
+  input[type='color'], input[type='date'], input[type='datetime'], input[type='datetime-local'], input[type='email'], input[type='month'], input[type='number'], input[type='password'], input[type='search'], input[type='tel'], input[type='text'], input[type='time'], input[type='url'], input[type='week'], input:not([type]), textarea,
+  select[multiple=multiple] {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 801px) {
+  input[type='color'], input[type='date'], input[type='datetime'], input[type='datetime-local'], input[type='email'], input[type='month'], input[type='number'], input[type='password'], input[type='search'], input[type='tel'], input[type='text'], input[type='time'], input[type='url'], input[type='week'], input:not([type]), textarea,
+  select[multiple=multiple] {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1025px) {
+  input[type='color'], input[type='date'], input[type='datetime'], input[type='datetime-local'], input[type='email'], input[type='month'], input[type='number'], input[type='password'], input[type='search'], input[type='tel'], input[type='text'], input[type='time'], input[type='url'], input[type='week'], input:not([type]), textarea,
+  select[multiple=multiple] {
+    font-size: 20px;
+  }
 }
 
 input[type='color']:hover, input[type='date']:hover, input[type='datetime']:hover, input[type='datetime-local']:hover, input[type='email']:hover, input[type='month']:hover, input[type='number']:hover, input[type='password']:hover, input[type='search']:hover, input[type='tel']:hover, input[type='text']:hover, input[type='time']:hover, input[type='url']:hover, input[type='week']:hover, input:not([type]):hover, textarea:hover,
@@ -253,72 +306,8 @@ select {
 
 /**
  * @file
- * atoms/_lists.scss
- *
- * Originally based on http://bitters.bourbon.io/
+ * atoms/_elements.headings.scss
  */
-ul,
-ol {
-  margin: 0 0 1rem;
-}
-
-dl {
-  margin-bottom: 0.8em;
-}
-
-dl dt {
-  font-weight: 600;
-  margin-top: 0.8em;
-}
-
-dl dd {
-  margin: 0;
-}
-
-/**
- * @file
- * atoms/_tables.scss
- *
- * Originally based on http://bitters.bourbon.io/
- */
-table {
-  border-collapse: collapse;
-  margin: 0.8em 0;
-  table-layout: fixed;
-  width: 100%;
-}
-
-th {
-  border-bottom: 1px solid #a6a6a6;
-  font-weight: 600;
-  padding: 0.8em 0;
-  text-align: left;
-}
-
-td {
-  border-bottom: 1px solid #ddd;
-  padding: 0.8em 0;
-}
-
-tr,
-td,
-th {
-  vertical-align: middle;
-}
-
-/**
- * @file
- * atoms/_typography.scss
- *
- * Originally based on http://bitters.bourbon.io/
- */
-html,
-body {
-  color: #333;
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  line-height: 1.6;
-}
-
 h1,
 h2,
 h3,
@@ -362,6 +351,121 @@ h6 {
   font-size: 0.67rem;
 }
 
+/**
+ * @file
+ * atoms/_elements.images.scss
+ */
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+picture source,
+picture img {
+  width: 100%;
+  height: auto;
+}
+
+/**
+ * @file
+ * atoms/_elements.lists.scss
+ */
+ul,
+ol {
+  margin: 0 0 1rem;
+}
+
+dl {
+  margin-bottom: 0.8em;
+}
+
+dl dt {
+  font-weight: 600;
+  margin-top: 0.8em;
+}
+
+dl dd {
+  margin: 0;
+}
+
+/**
+ * @file
+ * atoms/_elements.page.scss
+ */
+html {
+  background-color: #fefefe;
+}
+
+html,
+body {
+  color: #333;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  line-height: 1.6;
+}
+
+@media (max-width: 524px) {
+  html,
+  body {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 525px) {
+  html,
+  body {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 801px) {
+  html,
+  body {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1025px) {
+  html,
+  body {
+    font-size: 20px;
+  }
+}
+
+/**
+ * @file
+ * atoms/_elements.tables.scss
+ */
+table {
+  border-collapse: collapse;
+  margin: 0.8em 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+th {
+  border-bottom: 1px solid #a6a6a6;
+  font-weight: 600;
+  padding: 0.8em 0;
+  text-align: left;
+}
+
+td {
+  border-bottom: 1px solid #ddd;
+  padding: 0.8em 0;
+}
+
+tr,
+td,
+th {
+  vertical-align: middle;
+}
+
+/**
+ * @file
+ * atoms/_elements.text.scss
+ */
 p {
   margin: 0 0 1rem;
 }
