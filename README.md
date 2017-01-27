@@ -15,31 +15,14 @@ npm install
 
 ## Integrating with Drupal
 
-Prerequisites: Drupal 8.2 or later.
-
-
-### Component Libraries module
+### Required: Component Libraries module
 
 Install and enable the [Component Libraries module](https://www.drupal.org/project/components). No configuration is needed.
 
 
-### Drupal site settings
+### Optional: UI Patterns module
 
-The `_patterns` directory must be excluded in the site's `settings.php` file to prevent Drupal from discovering component templates with the same name as templates in the `templates` directory.
-
-Example:
-
-```
-$settings['file_scan_ignore_directories'] = [
-  'node_modules',
-  'bower_components',
-  '_patterns'
-];
-```
-
-If you forget this important step it is possible to end up with a WSOD (white screen of death).
-
-The `file_scan_ignore_directories` setting was added in Drupal 8.2, so unfortunately Shila theme will not work with older versions of Drupal 8.
+Install and enable the [UI Patterns module](https://www.drupal.org/project/ui_patterns). Some components have a `ui_patterns.yml` definition file, which enables them to be used with UI Patterns.
 
 
 ## Integrating with Pattern Lab
