@@ -6,13 +6,14 @@
 
 var config = {};
 config.browserSync = {
+  target:"localhost:3000",
   proxyTarget: 'localhost:8080',
   proxyReqHeaders: {
-    host: 'www.shila.dev'
+    host: 'md.cf-nad.com'
   }
 };
 config.drush = {
-  alias: '@local.d8.shila'
+  alias: '@local.d8.nad_shila'
 };
 config.sass = {
   srcFiles: [
@@ -27,9 +28,9 @@ config.sass = {
     includePaths: [
       './dist/sass',
       './node_modules/shila-css',
-      './node_modules/breakpoint-sass/stylesheets',
-      './node_modules/sass-toolkit/stylesheets',
-      './node_modules/singularitygs/stylesheets'
+      './node_modules/shila-css/node_modules/breakpoint-sass/stylesheets',
+      './node_modules/shila-css/node_modules/sass-toolkit/stylesheets',
+      './node_modules/shila-css/node_modules/singularitygs/stylesheets'
     ],
     outputStyle: 'expanded'
   },
@@ -78,6 +79,10 @@ gulp.task('watch', ['sass-change'], function () {
       target: config.browserSync.proxyTarget,
       reqHeaders: config.browserSync.proxyReqHeaders
     }
+    /*port: 5000,
+    proxy: "http://127.0.0.1:8080",
+    open: true,
+    reloadDelay: 50*/
   });
   gulp.watch(config.sass.watchFiles, ['sass-change']);
   gulp.watch(config.patternsDir + '/**/*.twig', ['patterns-change']);

@@ -424,11 +424,10 @@
 
 .pager li {
   display: inline-block;
-  padding-left: 0.65rem;
 }
 
-.pager li:first-child {
-  padding-left: 0;
+.pager li + li {
+  padding-left: 0.65rem;
 }
 
 .pager a {
@@ -775,11 +774,10 @@ code {
 
 .page__header .nav > ul li {
   display: inline-block;
-  padding-left: 0.65rem;
 }
 
-.page__header .nav > ul li:first-child {
-  padding-left: 0;
+.page__header .nav > ul li + li {
+  padding-left: 0.65rem;
 }
 
 .page__header .nav > ul a {
